@@ -18,9 +18,9 @@ nav {
    padding: 1rem 1.5rem;
    position: relative;
 }
-.nav-items{
-    justify-content: center;
-    align-items: center;
+.nav-items {
+   justify-content: center;
+   align-items: center;
 }
 .nav-items ul li {
    /* background-color: red; */
@@ -29,52 +29,84 @@ nav {
    padding: 1.2rem 2.4rem;
    font-size: 1.6rem;
 }
-.nav-items ul{
-    position: absolute;
+.nav-items ul {
+   position: absolute;
 }
-.ham-burger{
-    color: white;
-    font-size: 3rem;
+.ham-burger {
+   color: white;
+   font-size: 3rem;
 }
-.hide{
-    display: none;
+.hide {
+   display: none;
 }
-button{
-    border: none;
-    background-color: transparent;
+button {
+   border: none;
+   background-color: transparent;
 }
-.nav-visible{
-    display: flex !important;
-    animation: push-in .8s;
+.nav-visible {
+   display: flex !important;
+   animation: push-in 0.8s;
 }
 @keyframes push-in {
-    from{
-        height: 0%;
-    }
-    to{
-        height: 200px;
-    }
+   from {
+      height: 0%;
+   }
+   to {
+      height: 200px;
+   }
+}
+main {
+   height: 80vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* font-size: 16rem; */
+   line-height: 10;
+}
+main.equals {
+   transition: 0.9s;
+}
+.equals {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+.equals:hover .bar-1 {
+   rotate: 50deg;
+   transform: translateY(8px);
+}
+.equals:hover .bar-2 {
+   transform: translateY(-10px);
+   rotate: -50deg;
+}
+.bar-1,
+.bar-2 {
+   background-color: black;
+   height: 5px;
+   transition: 0.9s;
+
+   width: 50px;
 }
 @media only screen and (max-width: 550px) {
-    html{
-        font-size: 52.5%;
-    }
-    nav{
-        justify-content: space-between;
-    }
-    .nav-items ul{
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        background-color: royalblue;
-        top: 90px;
-        right: 0px;
-        width: 100%;
-        height:200px ;
-    }
-    .ham-burger{
-        display: block;
-    }
+   html {
+      font-size: 52.5%;
+   }
+   nav {
+      justify-content: space-between;
+   }
+   .nav-items ul {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      background-color: royalblue;
+      top: 90px;
+      right: 0px;
+      width: 100%;
+      height: 200px;
+   }
+   .ham-burger {
+      display: block;
+   }
 }
