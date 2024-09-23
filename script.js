@@ -1,5 +1,7 @@
 let hamBurgerBtn = document.querySelector(".ham-burger");
-let navItems = document.querySelector(".nav-ul");
-hamBurgerBtn.addEventListener("click",()=>{
-    navItems.classList.add("nav-visible");
-})
+let navUl = document.querySelector(".nav-ul");
+let equals = document.querySelector(".equals");
+hamBurgerBtn.addEventListener("click", () => {
+   navUl.classList.toggle("nav-visible");
+   equals.classList.toggle("active");
+});
